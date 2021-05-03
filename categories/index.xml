@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on shady的理想小站</title>
+    <link>https://ashshady.github.io/categories/</link>
+    <description>Recent content in Categories on shady的理想小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 May 2021 17:09:23 +0800</lastBuildDate><atom:link href="https://ashshady.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>pat</title>
+      <link>https://ashshady.github.io/categories/pat/</link>
+      <pubDate>Mon, 03 May 2021 17:09:23 +0800</pubDate>
+      
+      <guid>https://ashshady.github.io/categories/pat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>甲级</title>
+      <link>https://ashshady.github.io/categories/%E7%94%B2%E7%BA%A7/</link>
+      <pubDate>Mon, 03 May 2021 17:09:23 +0800</pubDate>
+      
+      <guid>https://ashshady.github.io/categories/%E7%94%B2%E7%BA%A7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stl</title>
+      <link>https://ashshady.github.io/categories/stl/</link>
+      <pubDate>Mon, 12 Apr 2021 19:21:38 +0800</pubDate>
+      
+      <guid>https://ashshady.github.io/categories/stl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>小站建设</title>
+      <link>https://ashshady.github.io/categories/%E5%B0%8F%E7%AB%99%E5%BB%BA%E8%AE%BE/</link>
+      <pubDate>Sun, 21 Mar 2021 21:23:03 +0800</pubDate>
+      
+      <guid>https://ashshady.github.io/categories/%E5%B0%8F%E7%AB%99%E5%BB%BA%E8%AE%BE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>小站日常</title>
+      <link>https://ashshady.github.io/categories/%E5%B0%8F%E7%AB%99%E6%97%A5%E5%B8%B8/</link>
+      <pubDate>Sun, 21 Mar 2021 21:23:03 +0800</pubDate>
+      
+      <guid>https://ashshady.github.io/categories/%E5%B0%8F%E7%AB%99%E6%97%A5%E5%B8%B8/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
