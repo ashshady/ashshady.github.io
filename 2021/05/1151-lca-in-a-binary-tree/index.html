@@ -8,25 +8,25 @@
 <meta name="generator" content="Hugo 0.81.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="shady">
 <meta name="keywords" content="tech, blog, C&#43;&#43;, C, PAT, life">
-<meta name="description" content="PAT甲级题集，素数判断，字符串截取问题">
+<meta name="description" content="PAT甲级题集，最低公共祖先问题">
 
 
-<meta property="og:description" content="PAT甲级题集，素数判断，字符串截取问题">
+<meta property="og:description" content="PAT甲级题集，最低公共祖先问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1152 Google Recruitment">
-<meta name="twitter:title" content="1152 Google Recruitment">
-<meta property="og:url" content="https://ashshady.github.io/2021/05/1152-google-recruitment/">
-<meta property="twitter:url" content="https://ashshady.github.io/2021/05/1152-google-recruitment/">
+<meta property="og:title" content="1151 LCA in a Binary Tree">
+<meta name="twitter:title" content="1151 LCA in a Binary Tree">
+<meta property="og:url" content="https://ashshady.github.io/2021/05/1151-lca-in-a-binary-tree/">
+<meta property="twitter:url" content="https://ashshady.github.io/2021/05/1151-lca-in-a-binary-tree/">
 <meta property="og:site_name" content="shady的理想小站">
-<meta property="og:description" content="PAT甲级题集，素数判断，字符串截取问题">
-<meta name="twitter:description" content="PAT甲级题集，素数判断，字符串截取问题">
+<meta property="og:description" content="PAT甲级题集，最低公共祖先问题">
+<meta name="twitter:description" content="PAT甲级题集，最低公共祖先问题">
 <meta property="og:locale" content="zh-cn">
 
   
-    <meta property="article:published_time" content="2021-05-03T17:09:23">
+    <meta property="article:published_time" content="2021-05-03T20:19:44">
   
   
-    <meta property="article:modified_time" content="2021-05-03T17:09:23">
+    <meta property="article:modified_time" content="2021-05-03T20:19:44">
   
   
   
@@ -38,9 +38,7 @@
   
   
     
-      <meta property="article:tag" content="素数">
-    
-      <meta property="article:tag" content="字符串">
+      <meta property="article:tag" content="最低公共祖先">
     
   
 
@@ -64,14 +62,14 @@
   <meta property="twitter:image" content="https://ashshady.github.io/images/touxiang.jpg">
 
 
-    <title>1152 Google Recruitment</title>
+    <title>1151 LCA in a Binary Tree</title>
 
     <link rel="icon" href="https://ashshady.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://ashshady.github.io/2021/05/1152-google-recruitment/">
+    <link rel="canonical" href="https://ashshady.github.io/2021/05/1151-lca-in-a-binary-tree/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -231,13 +229,13 @@
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      1152 Google Recruitment
+      1151 LCA in a Binary Tree
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-05-03T17:09:23&#43;08:00">
+      <time itemprop="datePublished" datetime="2021-05-03T20:19:44&#43;08:00">
         
   五月 3, 2021
 
@@ -260,27 +258,31 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>PAT甲级题集，素数判断，字符串截取问题</p>
-<p>In July 2004, Google posted on a giant billboard along Highway 101 in Silicon Valley (shown in the picture below) for recruitment. The content is super-simple, a URL consisting of the first 10-digit prime found in consecutive digits of the natural constant <em>e</em>. The person who could find this prime number could go to the next step in Google&rsquo;s hiring process by visiting this website.</p>
-<p><img src="https://images.ptausercontent.com/57148679-d574-4f49-b048-775c6c07791c.jpg" alt="prime.jpg"></p>
-<p>The natural constant <em>e</em> is a well known transcendental number（超越数）. The first several digits are: <em>e</em> = 2.71828182845904523536028747135266249775724709369995957496696762772407663035354759457138217852516642<strong>7427466391</strong>932003059921&hellip; where the 10 digits in bold are the answer to Google&rsquo;s question.</p>
-<p>Now you are asked to solve a more general problem: find the first K-digit prime in consecutive digits of any given L-digit number.</p>
+              <p>PAT甲级题集，最低公共祖先问题</p>
+<p>The lowest common ancestor (LCA) of two nodes U and V in a tree is the deepest node that has both U and V as descendants.</p>
+<p>Given any two nodes in a binary tree, you are supposed to find their LCA.</p>
 <h3 id="input-specification">Input Specification:</h3>
-<p>Each input file contains one test case. Each case first gives in a line two positive integers: L (≤ 1,000) and K (&lt; 10), which are the numbers of digits of the given number and the prime to be found, respectively. Then the L-digit number N is given in the next line.</p>
+<p>Each input file contains one test case. For each case, the first line gives two positive integers: M (≤ 1,000), the number of pairs of nodes to be tested; and N (≤ 10,000), the number of keys in the binary tree, respectively. In each of the following two lines, N distinct integers are given as the inorder and preorder traversal sequences of the binary tree, respectively. It is guaranteed that the binary tree can be uniquely determined by the input sequences. Then M lines follow, each contains a pair of integer keys U and V. All the keys are in the range of <strong>int</strong>.</p>
 <h3 id="output-specification">Output Specification:</h3>
-<p>For each test case, print in a line the first K-digit prime in consecutive digits of N. If such a number does not exist, output <code>404</code> instead. Note: the leading zeroes must also be counted as part of the K digits. For example, to find the 4-digit prime in 200236, 0023 is a solution. However the first digit 2 must not be treated as a solution 0002 since the leading zeroes are not in the original number.</p>
-<h3 id="sample-input-1">Sample Input 1:</h3>
-<pre><code class="language-in" data-lang="in">20 5
-23654987725541023819
-</code></pre><h3 id="sample-output-1">Sample Output 1:</h3>
-<pre><code class="language-out" data-lang="out">49877
-</code></pre><h3 id="sample-input-2">Sample Input 2:</h3>
-<pre><code class="language-in" data-lang="in">10 3
-2468024680
-</code></pre><h3 id="sample-output-2">Sample Output 2:</h3>
-<pre><code class="language-out" data-lang="out">404
+<p>For each given pair of U and V, print in a line <code>LCA of U and V is A.</code> if the LCA is found and <code>A</code> is the key. But if <code>A</code> is one of U and V, print <code>X is an ancestor of Y.</code> where <code>X</code> is <code>A</code> and <code>Y</code> is the other node. If U or V is not found in the binary tree, print in a line <code>ERROR: U is not found.</code> or <code>ERROR: V is not found.</code> or <code>ERROR: U and V are not found.</code>.</p>
+<h3 id="sample-input">Sample Input:</h3>
+<pre><code>6 8
+7 2 3 4 6 5 1 8
+5 3 7 2 6 4 8 1
+2 6
+8 1
+7 9
+12 -3
+0 8
+99 99
+</code></pre><h3 id="sample-output">Sample Output:</h3>
+<pre><code>LCA of 2 and 6 is 3.
+8 is an ancestor of 1.
+ERROR: 9 is not found.
+ERROR: 12 and -3 are not found.
+ERROR: 0 is not found.
+ERROR: 99 and 99 are not found.
 </code></pre><h2 id="思路分析">思路分析</h2>
-<p>以后再补</p>
 <h2 id="ac代码">AC代码</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span>
@@ -288,42 +290,62 @@
 
 <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> inf <span style="color:#f92672">=</span> <span style="color:#ae81ff">0x3f3f3f3f</span>;
 <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> minInf <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0x3f3f3f3f</span>;
-<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> maxn <span style="color:#f92672">=</span> <span style="color:#ae81ff">10086</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> maxn <span style="color:#f92672">=</span> <span style="color:#ae81ff">210</span>;
 <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> mod <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span>) <span style="color:#ae81ff">1e9</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">7</span>;
 <span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> ll;
 <span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> ull;
 
-<span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">is_prime</span>(<span style="color:#66d9ef">int</span> n) {
-    <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)
-        <span style="color:#66d9ef">return</span> false;
-    <span style="color:#66d9ef">int</span> t <span style="color:#f92672">=</span> sqrt(n);
-    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i <span style="color:#f92672">&lt;=</span> t; <span style="color:#f92672">++</span>i) {
-        <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">%</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
-            <span style="color:#66d9ef">return</span> false;
-    }
-    <span style="color:#66d9ef">return</span> true;
+vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> pre, in;
+<span style="color:#66d9ef">int</span> l, r;
+<span style="color:#66d9ef">int</span> l_pos, r_pos;
+map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> pos;
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">LCA</span>(<span style="color:#66d9ef">int</span> preL, <span style="color:#66d9ef">int</span> inL, <span style="color:#66d9ef">int</span> inR) {
+    <span style="color:#66d9ef">if</span> (inL <span style="color:#f92672">&gt;</span> inR)
+        <span style="color:#66d9ef">return</span>;
+    <span style="color:#66d9ef">int</span> root <span style="color:#f92672">=</span> pre[preL];
+    <span style="color:#66d9ef">int</span> root_pos <span style="color:#f92672">=</span> pos[root];
+    <span style="color:#66d9ef">if</span> (root_pos <span style="color:#f92672">&gt;</span> l_pos <span style="color:#f92672">&amp;&amp;</span> root_pos <span style="color:#f92672">&gt;</span> r_pos)
+        LCA(preL <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, inL, root_pos <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (root_pos <span style="color:#f92672">&lt;</span> l_pos <span style="color:#f92672">&amp;&amp;</span> root_pos <span style="color:#f92672">&lt;</span> r_pos)
+        LCA(preL <span style="color:#f92672">+</span> root_pos <span style="color:#f92672">-</span> inL <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, root_pos <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, inR);
+    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> ((root_pos <span style="color:#f92672">&gt;</span> l_pos <span style="color:#f92672">&amp;&amp;</span> root_pos <span style="color:#f92672">&lt;</span> r_pos) <span style="color:#f92672">||</span> (root_pos <span style="color:#f92672">&gt;</span> r_pos <span style="color:#f92672">&amp;&amp;</span> root_pos <span style="color:#f92672">&lt;</span> l_pos))
+        printf(<span style="color:#e6db74">&#34;LCA of %d and %d is %d.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, l, r, root);
+    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (root_pos <span style="color:#f92672">==</span> l_pos)
+        printf(<span style="color:#e6db74">&#34;%d is an ancestor of %d.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, l, r);
+    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (root_pos <span style="color:#f92672">==</span> r_pos)
+        printf(<span style="color:#e6db74">&#34;%d is an ancestor of %d.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, r, l);
 }
 
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-    <span style="color:#66d9ef">int</span> n, m;
-    cin <span style="color:#f92672">&gt;&gt;</span> n <span style="color:#f92672">&gt;&gt;</span> m;
-    string s;
-    cin <span style="color:#f92672">&gt;&gt;</span> s;
-
-    <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">&lt;</span> m <span style="color:#f92672">||</span> m <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
-        cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;404&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
-        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">int</span> n, query;
+    cin <span style="color:#f92672">&gt;&gt;</span> query <span style="color:#f92672">&gt;&gt;</span> n;
+    <span style="color:#66d9ef">int</span> t;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; <span style="color:#f92672">++</span>i) {
+        cin <span style="color:#f92672">&gt;&gt;</span> t;
+        in.push_back(t);
+        pos[t] <span style="color:#f92672">=</span> i;
     }
-
-    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;=</span> s.length() <span style="color:#f92672">-</span> m; <span style="color:#f92672">++</span>i) {
-        string temp <span style="color:#f92672">=</span> s.substr(i, m);
-        <span style="color:#66d9ef">int</span> t <span style="color:#f92672">=</span> stoi(temp);
-        <span style="color:#66d9ef">if</span> (is_prime(t)) {
-            cout <span style="color:#f92672">&lt;&lt;</span> temp <span style="color:#f92672">&lt;&lt;</span> endl;
-            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; <span style="color:#f92672">++</span>i) {
+        cin <span style="color:#f92672">&gt;&gt;</span> t;
+        pre.push_back(t);
+    }
+    <span style="color:#66d9ef">while</span> (query<span style="color:#f92672">--</span>) {
+        cin <span style="color:#f92672">&gt;&gt;</span> l <span style="color:#f92672">&gt;&gt;</span> r;
+        <span style="color:#66d9ef">if</span> (pos.count(l) <span style="color:#f92672">&amp;&amp;</span> pos.count(r)) {
+            l_pos <span style="color:#f92672">=</span> pos[l];
+            r_pos <span style="color:#f92672">=</span> pos[r];
+            LCA(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+        } <span style="color:#66d9ef">else</span> {
+            <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>pos.count(l) <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>pos.count(r))
+                printf(<span style="color:#e6db74">&#34;ERROR: %d and %d are not found.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, l, r);
+            <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>pos.count(l))
+                printf(<span style="color:#e6db74">&#34;ERROR: %d is not found.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, l);
+            <span style="color:#66d9ef">else</span>
+                printf(<span style="color:#e6db74">&#34;ERROR: %d is not found.</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, r);
         }
     }
-    cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;404&#34;</span> <span style="color:#f92672">&lt;&lt;</span> endl;
+
 
     <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }
@@ -340,15 +362,13 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">标签</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://ashshady.github.io/tags/%E7%B4%A0%E6%95%B0/">素数</a>
-
-  <a class="tag tag--primary tag--small" href="https://ashshady.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+  <a class="tag tag--primary tag--small" href="https://ashshady.github.io/tags/%E6%9C%80%E4%BD%8E%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/">最低公共祖先</a>
 
                   </div>
                 
               
             
-              <span id="/2021/05/1152-google-recruitment/" class="leancloud_visitors" data-flag-title="1152 Google Recruitment">
+              <span id="/2021/05/1151-lca-in-a-binary-tree/" class="leancloud_visitors" data-flag-title="1151 LCA in a Binary Tree">
                 <span class="post-meta-item-text">文章阅读量 </span>
                 <span class="leancloud-visitors-count">1000000</span>
                 <p></p>
@@ -375,7 +395,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ashshady.github.io/2021/05/1153-decode-registration-card-of-pat/" data-tooltip="1153 Decode Registration Card of PAT">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ashshady.github.io/2021/05/1152-google-recruitment/" data-tooltip="1152 Google Recruitment">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -383,7 +403,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ashshady.github.io/2021/05/1151-lca-in-a-binary-tree/" data-tooltip="1151 LCA in a Binary Tree">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -433,7 +453,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ashshady.github.io/2021/05/1153-decode-registration-card-of-pat/" data-tooltip="1153 Decode Registration Card of PAT">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://ashshady.github.io/2021/05/1152-google-recruitment/" data-tooltip="1152 Google Recruitment">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -441,7 +461,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://ashshady.github.io/2021/05/1151-lca-in-a-binary-tree/" data-tooltip="1151 LCA in a Binary Tree">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                   <i class="fa fa-angle-right"></i>
