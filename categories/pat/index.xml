@@ -6,7 +6,16 @@
     <description>Recent content in pat on shady的理想小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 May 2021 20:19:44 +0800</lastBuildDate><atom:link href="https://ashshady.github.io/categories/pat/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 May 2021 23:39:45 +0800</lastBuildDate><atom:link href="https://ashshady.github.io/categories/pat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1150 Travelling Salesman Problem</title>
+      <link>https://ashshady.github.io/2021/05/1150-travelling-salesman-problem/</link>
+      <pubDate>Fri, 14 May 2021 23:39:45 +0800</pubDate>
+      
+      <guid>https://ashshady.github.io/2021/05/1150-travelling-salesman-problem/</guid>
+      <description>&lt;p&gt;PAT甲级题集，快递员问题，最短路dijkstra&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>1151 LCA in a Binary Tree</title>
       <link>https://ashshady.github.io/2021/05/1151-lca-in-a-binary-tree/</link>
