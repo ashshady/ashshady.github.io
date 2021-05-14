@@ -8,15 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 14 May 2021 23:39:45 +0800</lastBuildDate><atom:link href="https://ashshady.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>dijkstra</title>
-      <link>https://ashshady.github.io/tags/dijkstra/</link>
-      <pubDate>Fri, 14 May 2021 23:39:45 +0800</pubDate>
-      
-      <guid>https://ashshady.github.io/tags/dijkstra/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>图论</title>
       <link>https://ashshady.github.io/tags/%E5%9B%BE%E8%AE%BA/</link>
       <pubDate>Fri, 14 May 2021 23:39:45 +0800</pubDate>
@@ -26,11 +17,11 @@
     </item>
     
     <item>
-      <title>最短路径</title>
-      <link>https://ashshady.github.io/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/</link>
+      <title>模拟</title>
+      <link>https://ashshady.github.io/tags/%E6%A8%A1%E6%8B%9F/</link>
       <pubDate>Fri, 14 May 2021 23:39:45 +0800</pubDate>
       
-      <guid>https://ashshady.github.io/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/</guid>
+      <guid>https://ashshady.github.io/tags/%E6%A8%A1%E6%8B%9F/</guid>
       <description></description>
     </item>
     
@@ -62,11 +53,11 @@
     </item>
     
     <item>
-      <title>模拟</title>
-      <link>https://ashshady.github.io/tags/%E6%A8%A1%E6%8B%9F/</link>
-      <pubDate>Mon, 03 May 2021 17:06:46 +0800</pubDate>
+      <title>暴力</title>
+      <link>https://ashshady.github.io/tags/%E6%9A%B4%E5%8A%9B/</link>
+      <pubDate>Mon, 03 May 2021 16:59:44 +0800</pubDate>
       
-      <guid>https://ashshady.github.io/tags/%E6%A8%A1%E6%8B%9F/</guid>
+      <guid>https://ashshady.github.io/tags/%E6%9A%B4%E5%8A%9B/</guid>
       <description></description>
     </item>
     
